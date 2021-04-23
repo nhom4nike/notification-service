@@ -1,0 +1,9 @@
+services:
+    notification-service:
+      image: notification-service
+      container_name: notification-service
+      build:
+        context: .
+        dockerfile: Dockerfile.prod
+      ports:
+        - '3004:3004'
