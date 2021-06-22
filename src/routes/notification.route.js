@@ -10,9 +10,6 @@ const kafkaService = KafkaService.getInstance(process.env.SERVICE_NAME, [
 
 const router = express.Router()
 
+router.post('/send', controller.notify)
 
-
-
-
-
-module.exports = { endpoint: '/', router }
+module.exports = { endpoint: '/notification', router }

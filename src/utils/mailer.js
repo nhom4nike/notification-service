@@ -38,12 +38,12 @@ const transporter = nodeMailer.createTransport({
     },
 });
 
-const sendEmail = function (receiverEmail, event) {
+const sendEmail = function (receiverEmail, document, event) {
     const mailOptions = {
         from: `"NikeSign" ${email}`,
         to: `${receiverEmail}`,
         subject: 'NikeSign Notification',
-        text: `${event}`,
+        text: `${event} \n${document}`,
     };
     return new Promise((resolve) => {
         transporter.sendMail(mailOptions, (error, info) => {

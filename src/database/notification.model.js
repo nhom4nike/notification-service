@@ -5,12 +5,17 @@ module.exports = function (mongoose) {
         'notification',
         new Schema(
             {
-                toUser: {
+                recipient: {
                     type: Schema.Types.String,
                     required: true,
                 },
-                content: {
+                document: {
                     type: Schema.Types.String,
+                    required: true,
+                },
+                event: {
+                    type: Schema.Types.String,
+                    required: true,
                 }
             },
             {
